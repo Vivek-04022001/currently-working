@@ -13,7 +13,7 @@ body {
 
 .container,
 .crop-modal {
-  max-height: 700px;
+  /* max-height: 700px; */
   height: 400px;
   width: 450px;
   background-color: #ffffff;
@@ -42,28 +42,39 @@ body {
   border-radius: 8px;
 }
 .input-box #input-image {
-  display: none;
+  /* display: none; */
 }
 
 .input-box .show-image {
-  border: 1px solid black;
+  border: 1px solid red;
   width: 220px;
-  height: 280px;
+  /* height: 280px; */
   margin: auto;
+}
+
+.show-image  img{
+ width: 100%;
 }
 
 .crop-modal {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* overflow:hidden; */
 }
 .crop-modal button {
   background-color: black;
   color: white;
   width: 90px;
-  margin: 5px auto;
+  margin: 25px auto;
   padding: 7px 20px;
   border-radius: 4px;
+}
+#cropImage {
+  width: 250px;
+  height: 250px;
+  border:1px dotted black;
+  margin: auto;
 }
 
 .hide {

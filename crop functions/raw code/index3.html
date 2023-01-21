@@ -24,16 +24,22 @@
       <div class="input-box">
         <label for="input-image"
           >Upload file
-          <input type="file" name="image" id="input-image" />
+          <input type="file" name="image" id="input-image"  required accept="image/*"/>
         </label>
-        <div class="show-image hide"></div>
+        <div class="show-image hide">
+          <img src="" alt="saved image" class="savedImage">
+        </div>
       </div>
     </div>
 
     <!-- crop-modal -->
-    <div class=" crop-modal hide">
-      <img src="" alt="crop image" class="crop-image" />
-      <button type="button">Save</button>
+    <div class="crop-modal hide ">
+      <div id="cropImage">
+        <!-- fro crop image -->
+
+
+      </div>
+      <button type="button" class="saveBtn">Save</button>
     </div>
     <script src="app.js"></script>
   </body>
