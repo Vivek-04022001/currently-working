@@ -1,0 +1,105 @@
+@media print {
+  @page {
+    size: A4;
+    size: landscape;
+    margin: 10;
+  }
+
+  @media print {
+    .container-form {
+      page-break-after: always;
+    }
+  }
+
+  body {
+    width: 297mm;
+    height: 210mm;
+  }
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+.container-form {
+  height: 210mm;
+  margin: 10px;
+  outline: 1px solid black;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container-form h2 {
+  text-align: center;
+}
+
+.container-form p {
+  font-size: 10px;
+}
+
+.container-form span {
+  text-decoration: underline;
+  margin: 0 5px;
+}
+label {
+  display: inline-block;
+  font-size: 10px;
+
+  margin: 10px 0px;
+}
+
+input {
+  margin: 0px 30px;
+}
+
+table,
+th,
+td {
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 3px;
+  text-align: center;
+  font-weight: 300;
+}
+
+table {
+  width: 100%;
+  font-size: 10px;
+  margin: 10px 0;
+}
+
+.container-form h4 {
+  text-decoration: underline;
+  font-size: 12px;
+}
+
+.container-form .signature {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+footer.first .signature p {
+  margin: 0px 140px 0px 30px;
+}
+
+.container-form ol {
+  padding: 0 15;
+  margin-bottom: 10px;
+}
+.container-form li {
+  font-size: 8px;
+}
+.container-form footer.second .signature {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container-form footer.second .signature label {
+  margin: 0px 200px 0px 30px;
+}
+.container-form footer.second input {
+  display: none;
+}

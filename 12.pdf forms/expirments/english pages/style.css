@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+}
+@media print {
+  @page {
+    size: A4;
+    size: portrait;
+    margin: 0;
+    background-color: pink;
+  }
+
+  .container-form {
+    page-break-after: always;
+  }
+}
+
+body {
+  width: 297mm;
+  height: 210mm;
+}
+.container-form {
+  width: auto;
+  height: 100%;
+  margin: 20px 10px;
+  position: relative;
+  padding: 5px;
+  outline: 1px solid black;
+}
+
+.container-form h2 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.container-form p {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.container-form span {
+  text-decoration: underline;
+  margin: 0px 3px;
+}
+
+.container-form table {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+}
+.container-form th {
+  font-size: 13px;
+}
+.container-form td,
+.container-form th {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.container-form footer.first {
+  position: absolute;
+  bottom: 20px;
+}
+.container-form h4 {
+  text-decoration: underline;
+}
+
+.container-form .signature {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* second page */
+.container-form ol {
+  font-size: 10px;
+}
+.container-form p {
+  font-size: 10px;
+}
+.container-form .signature label {
+  font-size: 10px;
+}
+.container-form footer.second {
+  position: absolute;
+  width: 99%;
+  bottom: 0px;
+}
