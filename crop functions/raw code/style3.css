@@ -41,8 +41,8 @@ body {
   margin: 15px;
   border-radius: 8px;
 }
-.input-box #input-image {
-  /* display: none; */
+input {
+  display: none;
 }
 
 .input-box .show-image {
