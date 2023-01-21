@@ -21,9 +21,37 @@ inputs.forEach((input)=>{
     let uniqueString = id.charAt(id.length -1);
     const imageFileName = document.getElementsByClassName(`savedImage-${uniqueString}`);
     console.log(imageFileName);
+
+    const reader = new FileReader();
+    reader.readAsDataURL(e.target.files[0]);
+   reader.onload = (e)=>{
+    let image = document.createElement("img");
+    // image.id = "image";
+    image.id = `image-${uniqueString}`
+    console.log(image.id);
+    image.src = e.target.result;
+    cropImage.innerHTML = '';
+    console.log(cropImage);
+    cropImage.appendChild(image);
+    
+    cropModal.classList.remove("hide");
+    
+    cropper = new Cropper(image,{
+                    
+        viewMode: 1
+    });
+} 
+
+  })
+
+  saveBtn.addEventListener('click',(e)=>{
+    e.preventDefault();
+    console.log(document.getElementsByClassName('cropper-hidden'));
   })
   
 })
+
+
 
 // InputElement.addEventListener("change", (e)=> {
 //     console.log("Hello world");

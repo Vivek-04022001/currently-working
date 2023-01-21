@@ -22,6 +22,10 @@ body {
   border-radius: 14px;
   text-align: center;
 }
+.container{
+  display:flex;
+  justify-content: space-between;
+}
 
 .input-box {
   width: 80%;
