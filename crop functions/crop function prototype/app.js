@@ -1,15 +1,8 @@
-const cropModal = document.querySelector(".crop-modal");
-const savedImage0 = document.querySelector(".savedImage-0");
-
-const savedImage1 = document.querySelector(".savedImage-1");
-const inputImage0 = document.getElementById("input-image-0");
-const inputImage1 = document.getElementById("input-image-1");
-
 // variables
 const inputs = document.querySelectorAll("input");
 const cropImage = document.getElementById("cropImage");
 const saveBtn = document.querySelector(".saveBtn");
-
+const cropModal = document.querySelector(".crop-modal");
 let cropper = "";
 
 //events
@@ -48,24 +41,24 @@ saveBtn.addEventListener("click", (e) => {
   
   // create new variables
   const cropImageId = document.getElementById("cropImage").querySelector("img").id;
-  const imageNumber = cropImageId.charAt(cropImageId.length - 1);
+  const cropImageNumber = cropImageId.charAt(cropImageId.length - 1);
   const savedImageSourceAddress = document.getElementsByClassName(
-    `savedImage-${imageNumber}`
+    `savedImage-${cropImageNumber}`
   )[0];
   const showImageDiv = document.getElementsByClassName(
-    `show-image-${uniqueId}`
+    `show-image-${cropImageNumber}`
   )[0];
-
-  // get canvas cropped url
+  
+  // canvas url
   const canvasSourceAddress = cropper
     .getCroppedCanvas({
       width: "300",
     })
     .toDataURL();
 
-  // hide showImageDiv
+   // hide div 
   showImageDiv.classList.remove("hide");
 
-
+  // assign canvas url 
   savedImageSourceAddress.src = canvasSourceAddress;
 });
