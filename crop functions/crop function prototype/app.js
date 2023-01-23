@@ -1,37 +1,37 @@
-// variables
-const cropImage = document.getElementById("cropImage");
 const cropModal = document.querySelector(".crop-modal");
-const saveBtn = document.querySelector(".saveBtn");
 const savedImage0 = document.querySelector(".savedImage-0");
 
 const savedImage1 = document.querySelector(".savedImage-1");
 const inputImage0 = document.getElementById("input-image-0");
 const inputImage1 = document.getElementById("input-image-1");
-// const showImage = document.querySelector(".show-image");
 
+// variables
 const inputs = document.querySelectorAll("input");
-// console.log(inputs);
+const cropImage = document.getElementById("cropImage");
+const saveBtn = document.querySelector(".saveBtn");
 
 let cropper = "";
+
+//events
 inputs.forEach((input) => {
   input.addEventListener("change", (e) => {
-    let id = e.target.id;
-    let uniqueString = id.charAt(id.length - 1);
-    const imageFileName = document.getElementsByClassName(
-      `savedImage-${uniqueString}`
-    );
-    // console.log(imageFileName);
+    //create new variables
+    let inputId = e.target.id;
+    let inputNumber = inputId.charAt(inputId.length - 1);
 
+    // reader object
     const reader = new FileReader();
     reader.readAsDataURL(e.target.files[0]);
     reader.onload = (e) => {
       let image = document.createElement("img");
-      // image.id = "image";
-      image.id = `image-${uniqueString}`;
-      // console.log(image.id);
+
+      image.id = `image-${inputNumber}`;
+
       image.src = e.target.result;
+
+      //clear cropImage
       cropImage.innerHTML = "";
-      // console.log(cropImage);
+
       cropImage.appendChild(image);
 
       cropModal.classList.remove("hide");
@@ -45,59 +45,27 @@ inputs.forEach((input) => {
 
 saveBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  const Id = document.getElementById("cropImage").querySelector("img").id;
-  const uniqueId = Id.charAt(Id.length - 1);
-  const savedImageSource = document.getElementsByClassName(
-    `savedImage-${uniqueId}`
-  );
-  console.log(savedImageSource[0]);
+  
+  // create new variables
+  const cropImageId = document.getElementById("cropImage").querySelector("img").id;
+  const imageNumber = cropImageId.charAt(cropImageId.length - 1);
+  const savedImageSourceAddress = document.getElementsByClassName(
+    `savedImage-${imageNumber}`
+  )[0];
+  const showImageDiv = document.getElementsByClassName(
+    `show-image-${uniqueId}`
+  )[0];
 
-  const imageSource = cropper
+  // get canvas cropped url
+  const canvasSourceAddress = cropper
     .getCroppedCanvas({
       width: "300",
     })
     .toDataURL();
 
-    const showImage = document.getElementsByClassName(`show-image-${uniqueId}`)[0];
-    showImage.classList.remove("hide");
-
-    savedImageSource[0].src = imageSource ;
+  // hide showImageDiv
+  showImageDiv.classList.remove("hide");
 
 
+  savedImageSourceAddress.src = canvasSourceAddress;
 });
-
-// InputElement.addEventListener("change", (e)=> {
-//     console.log("Hello world");
-//   const reader = new FileReader();
-
-// reader.onload = (e)=>{
-//     let image = document.createElement("img");
-//     image.id = "image";
-//     image.src = e.target.result;
-//     cropImage.innerHTML = '';
-//     console.log(cropImage);
-//     cropImage.appendChild(image);
-
-//     cropModal.classList.remove("hide");
-
-//     cropper = new Cropper(image,{
-
-//         viewMode: 1
-//     });
-// }
-//   reader.readAsDataURL(e.target.files[0]);
-// });
-
-// saveBtn.addEventListener("click", function (e) {
-//   e.preventDefault();
-
-//   let imageSource = cropper
-//     .getCroppedCanvas({
-//       width: '300',
-//     })
-//     .toDataURL();
-
-//     showImage.classList.remove("hide");
-//     savedImage.src = imageSource;
-
-// });
