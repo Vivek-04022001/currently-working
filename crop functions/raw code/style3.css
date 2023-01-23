@@ -49,14 +49,16 @@ input {
   display: none;
 }
 
-.input-box .show-image {
+.input-box .show-image-0,
+.input-box .show-image-1 {
   border: 1px solid red;
-  width: 220px;
+  width: 180px;
   /* height: 280px; */
   margin: auto;
 }
 
-.show-image  img{
+.show-image-0  img,
+.show-image-1 img{
  width: 100%;
 }
 
