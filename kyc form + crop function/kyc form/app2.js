@@ -5,7 +5,7 @@ labels.forEach((label)=>{
     label.addEventListener('click',function(e){
         e.preventDefault();
         openModal();
-        document.body.classList.add('stop-scroll');
+        
     })
 })
 
@@ -20,6 +20,7 @@ const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modal');
 const btnsOpenModal = document.querySelectorAll('.show-modal');
+const body =
 console.log(btnsOpenModal);
 
 const openModal = function () {
@@ -35,6 +36,7 @@ const closeModal = function () {
   console.log('close button clicked');
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
+  document.body.classList.remove('stop-scroll');
 };
 
 btnCloseModal.addEventListener('click', closeModal);
