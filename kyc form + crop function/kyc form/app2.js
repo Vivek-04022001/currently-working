@@ -12,6 +12,7 @@ const openModal = function () {
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
   body.classList.add("stop-scroll");
+  modal.classList.add('position-fixed');
 };
 
 const closeModal = function () {
@@ -19,9 +20,12 @@ const closeModal = function () {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
   body.classList.remove("stop-scroll");
+  modal.classList.remove('position-fixed');
+
 };
 
 // event handler
+
 labels.forEach((label) => {
   label.addEventListener("click", function (e) {
     console.log("clicked");
