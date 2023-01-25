@@ -19,20 +19,42 @@ body{
   display: none;
 }
 
-/* .modal {
+.crop-modal {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 70%;
   background-color: white;
-  padding: 6rem;
+  padding: 2rem;
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
-} */
+}
 
-.crop-modal {
+#cropImage{
+  width: 350px;
+  height: 250px;
+  border:1px solid black;
+  margin:auto;
+  /* overflow:hidden; */
+}
+
+.saveBtn {
+  display:block;
+  margin: 10px auto;
+  width: 100px;
+  padding: 7px 14px;
+  border-radius: 14px;
+  border:none;
+  background:#3b5998;
+  color: white;
+}
+
+
+
+
+/* .crop-modal {
   display:flex;
   flex-direction: column;
   justify-content: space-between;
@@ -40,17 +62,16 @@ body{
   background-color: white;
   padding: 6rem;
   border-radius: 5px;
-  
-}
+} */
 
-.position-fixed{
+/* .position-fixed{
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
-}
+} */
 
 .overlay {
   position: fixed;
@@ -67,20 +88,6 @@ body{
   overflow: hidden;
 }
 
-// crop canvas
-/* .cropImage{
-  width: 250px;
-  height: 250px;
-  border: 1px dotted black;
-  margin: auto;
-} */
 
-.crop-modal .saveBtn {
-  background-color: black;
-  color: white;
-  width: 90px;
-  margin: 25px auto;
-  padding: 7px 20px;
-  border-radius: 4px;
-  margin-top: 40px;
-}
+
+
