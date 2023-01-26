@@ -7,7 +7,8 @@ const btnCloseModal = document.querySelector(".close-modal");
 const cropImage = document.getElementById("cropImage");
 const saveBtn = document.querySelector('.saveBtn');
 let cropper = "";
-console.log(saveBtn);
+
+
 // functions
 
 const openModal = function () {
@@ -37,6 +38,7 @@ const formatFileSize = function (bytes) {
   const sufixes = ["B", "kB", "MB", "GB", "TB"];
   const i = Math.floor(Math.log(bytes) / Math.log(1024));
   return `${(bytes / Math.pow(1024, i)).toFixed(2)} ${sufixes[i]}`;
+
 };
 
 // remove image
@@ -63,12 +65,14 @@ function removeImage(id) {
   });
 }
 
+// crop functionality
 inputs.forEach((input) => {
   input.addEventListener("change", function (e) {
-    // console.log("clicked");
+    
     e.preventDefault();
     openModal();
 
+    
     // create variables
     const inputId = e.target.id;
     const inputIdUniqueNumber = inputId.charAt(inputId.length - 1);
@@ -80,8 +84,7 @@ inputs.forEach((input) => {
       let image = document.createElement("img");
       image.id = `image-${inputIdUniqueNumber}`;
       image.src = e.target.result;
-      // console.log(image.id);
-      // console.log(image.src);
+      
       //clear cropImage
       cropImage.innerHTML = "";
 
@@ -91,12 +94,12 @@ inputs.forEach((input) => {
         viewMode: 1,
       });
 
-      // console.log(cropper);
+      
     };
   });
 });
 
-// save button: preview Image + show file name & size + close modal
+// save button: preview Image + show file name & size + close modal+ REMOVE IMAGE
 saveBtn.addEventListener('click', function(e){
   
   //create new variables
@@ -120,7 +123,7 @@ saveBtn.addEventListener('click', function(e){
   Text.style.display = 'block';
   Text.style.fontSize = "13px";
 
-  Text.innerText = `${inputFile.files[0].name} \n ${formatFileSize(inputFile.files[0].size)}`
+  Text.innerText = `${inputFile.files[0].name} \n ${formatFileSize(inputFile.files[0].size)}`;
   
 
   // callback functions
