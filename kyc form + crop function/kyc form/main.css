@@ -291,6 +291,7 @@ select {
 .image-preview__image9 {
   display: none;
   width: 100%;
+  margin:auto;
 }
 
 .image-details1,
