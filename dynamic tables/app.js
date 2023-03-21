@@ -1,77 +1,159 @@
-// Get reference to the table element in HTML
-const table = document.getElementById("my-table");
 
-// // Define the data for the table in a 2D array
-// const data = [
-//   ["John", "Doe", 35],
-//   ["Jane", "Smith", 27],
-//   ["Bob", "Johnson", 42],
-// ];
 
-// // Loop through the data and create table rows and cells dynamically
-// for (let i = 0; i < data.length; i++) {
-//   // Create a new row for each item in the data array
-//   const row = table.insertRow();
+const loanData = [
+  {
+    "Member photo": "https://via.placeholder.com/40",
+    "Member Id": "M001",
+    "Loan Id": "L001",
+    "Date of application": "2022-03-20",
+    "Member Name": "John Doe",
+    "Loan Type": "Personal Loan",
+    "Loan Amount": 50000,
+    "Purpose": "Home Renovation",
+    "sub-purpose": "Kitchen Renovation",
+    "Loan cycle": 1,
+    "Tenure": 36,
+    "Bank Name": "ABC Bank",
+    "IFSC code": "ABCD1234567",
+    "ROI": 12,
+    "LPF": 1.5,
+    "Insurance Premium": 1000,
+    "Net Loan Amount after deduction": 48350,
+    "disbursment mode": "Cheque",
+    "Revenue Stamp": 500
+  },
+  {
+    "Member photo": "https://via.placeholder.com/40",
+    "Member Id": "M002",
+    "Loan Id": "L002",
+    "Date of application": "2022-03-15",
+    "Member Name": "Jane Doe",
+    "Loan Type": "Home Loan",
+    "Loan Amount": 1000000,
+    "Purpose": "Purchase of new house",
+    "sub-purpose": "NA",
+    "Loan cycle": 2,
+    "Tenure": 240,
+    "Bank Name": "XYZ Bank",
+    "IFSC code": "XYZW9876543",
+    "ROI": 8.5,
+    "LPF": 2,
+    "Insurance Premium": 5000,
+    "Net Loan Amount after deduction": 975000,
+    "disbursment mode": "NEFT",
+    "Revenue Stamp": 2000
+  },
+  {
+    "Member photo": "https://via.placeholder.com/40",
+    "Member Id": "M003",
+    "Loan Id": "L003",
+    "Date of application": "2022-03-10",
+    "Member Name": "Bob Smith",
+    "Loan Type": "Car Loan",
+    "Loan Amount": 750000,
+    "Purpose": "Purchase of new car",
+    "sub-purpose": "NA",
+    "Loan cycle": 3,
+    "Tenure": 60,
+    "Bank Name": "PQR Bank",
+    "IFSC code": "PQRS5678901",
+    "ROI": 9.5,
+    "LPF": 1,
+    "Insurance Premium": 2500,
+    "Net Loan Amount after deduction": 740000,
+    "disbursment mode": "RTGS",
+    "Revenue Stamp": 1000
+  },
+  {
+    "Member photo": "https://via.placeholder.com/40",
+    "Member Id": "M004",
+    "Loan Id": "L004",
+    "Date of application": "2022-03-05",
+    "Member Name": "Alice Lee",
+    "Loan Type": "Education Loan",
+    "Loan Amount": 200000,
+    "Purpose": "MBA Program",
+    "sub-purpose": "NA",
+    "Loan cycle": 2,
+    "Tenure": 120,
+    "Bank Name": "LMN Bank",
+    "IFSC code": "LMNO2345678",
+    "ROI": 11,
+    "LPF": 1.8,
+    "Insurance Premium": 1500,
+    "Net Loan Amount after deduction": 740000,
+    "disbursment mode": "RTGS",
+    "Revenue Stamp": 1000
+  }, 
+  {
+    "Member photo": "https://via.placeholder.com/40",
+    "Member Id": "M005",
+    "Loan Id": "L005",
+    "Date of application": "2022-03-05",
+    "Member Name": "Alice Lee",
+    "Loan Type": "Education Loan",
+    "Loan Amount": 200000,
+    "Purpose": "MBA Program",
+    "sub-purpose": "NA",
+    "Loan cycle": 2,
+    "Tenure": 120,
+    "Bank Name": "LMN Bank",
+    "IFSC code": "LMNO2345678",
+    "ROI": 11,
+    "LPF": 1.8,
+    "Insurance Premium": 1500,
+    "Net Loan Amount after deduction": 740000,
+    "disbursment mode": "RTGS",
+    "Revenue Stamp": 1000
+  },
+ 
+ 
+ 
+]
 
-//   // Loop through each item in the row array and create a new cell for each item
-//   for (let j = 0; j < data[i].length; j++) {
-//     // Create a new cell for each item in the row array
-//     const cell = row.insertCell();
 
-//     // Set the cell's text to the current item in the row array
-//     cell.textContent = data[i][j];
-//   }
-// }
 
-// Define the data for the tables in 2D arrays
-const tableData = [
-    ["John", "Doe", "https://via.placeholder.com/150x150"],
-    ["Jane", "Smith", "https://via.placeholder.com/150x150"],
-    ["Bob", "Johnson", "https://via.placeholder.com/150x150"],
-  ];
-  
-  // Define the table headings for each table
-  const tableHeadings = ["First Name", "Last Name", "Image"];
-  
-  // Loop through the tableData array to create the tables dynamically
-  for (let i = 1; i <= 3; i++) {
-    // Get a reference to the current table element
-    const table = document.getElementById("table" + i);
-  
-    // Create a new row for the table headings
-    const headingRow = table.insertRow();
-  
-    // Loop through the tableHeadings array and create a new cell for each heading
-    for (let j = 0; j < tableHeadings.length; j++) {
-      // Create a new cell for each heading
-      const headingCell = headingRow.insertCell();
-  
-      // Set the cell's text to the current heading
-      headingCell.textContent = tableHeadings[j];
-    }
-  
-    // Loop through the tableData array and create a new row and cell for each item
-    for (let k = 0; k < tableData.length; k++) {
-      // Create a new row for each item in the data array
-      const row = table.insertRow();
-  
-      // Loop through each item in the row array and create a new cell for each item
-      for (let l = 0; l < tableData[k].length; l++) {
-        // Create a new cell for each item in the row array
-        const cell = row.insertCell();
-  
-        // If the current cell is the image cell, create an image element and set its src and alt attributes
-        if (l === 2) {
-          const img = document.createElement("img");
-          img.src = tableData[k][l];
-          img.alt = tableData[k][0] + " " + tableData[k][1];
-          cell.appendChild(img);
-        } else {
-          // Set the cell's text to the current item in the row array
-          cell.textContent = tableData[k][l];
-        }
-      }
+
+const table = document.getElementById("myTable");
+const thead = table.createTHead();
+const tbody = table.createTBody();
+
+const headers = ["Member photo", "Member Id", "Loan Id", "Date of application", "Member Name", "Loan Type", "Loan Amount", "Purpose", "sub-purpose", "Loan cycle", "Tenure", "Bank Name", "IFSC code", "ROI", "LPF", "Insurance Premium", "Net Loan Amount after deduction", "disbursment mode", "Revenue Stamp"];
+
+// create table header
+
+const headerRow = thead.insertRow(0);
+for (let i = 0; i < headers.length; i++) {
+  const header = document.createElement("th");
+  header.innerHTML = headers[i];
+  headerRow.appendChild(header);
+}
+
+// Create table body
+loanData.forEach((loan, index) => {
+  const row = tbody.insertRow(index);
+
+  for (const key in loan) {
+    const cell = row.insertCell();
+    const value = loan[key];
+    if (key === "Member photo") {
+      const image = document.createElement("img");
+      image.src = value;
+      cell.appendChild(image);
+    } else {
+      cell.textContent = value;
     }
   }
-  
-  
+});
+
+
+
+
+
+
+
+
+
+
+
+

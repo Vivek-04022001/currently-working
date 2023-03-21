@@ -1,15 +1,95 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <title>Document</title>
-</head>
-<body>
-   
-   
-    <script src="app1.js"></script>
-</body>
+  </head>
+  <body>
+    <div class="container-top">
+      <h1>working with dynamic tables.</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam maiores
+        modi quisquam! Tempora laudantium facilis consequuntur minus delectus
+        saepe quo maxime neque nostrum magni porro, nam earum distinctio
+        provident, perferendis veritatis quasi dolorem quos perspiciatis
+        consequatur rerum alias iure qui! Iusto quia qui laboriosam quis debitis
+        a, distinctio vel ratione sequi quas ea. Maxime tempore delectus
+        voluptatum quae. Tenetur, magni? Officia ab maiores ratione! Soluta ab
+        natus dolores, optio reprehenderit voluptates quo totam. Quo voluptatum
+        eos nam dolores odio ad praesentium dolorum dolorem esse eum, neque
+        error amet ratione voluptatem iste illum qui animi quidem. Assumenda
+        voluptatem omnis iusto reprehenderit dicta error tempore odio architecto
+        commodi incidunt. Possimus, voluptas. Inventore labore aspernatur
+        doloribus corporis laudantium laborum sit quae vel repudiandae, natus
+        iure itaque iste tenetur dolorum delectus. Fugiat ducimus esse
+        consectetur quaerat excepturi labore animi iste sapiente. Ipsum neque
+        impedit veritatis similique quod iure architecto eum repellendus natus
+        facere molestias accusamus atque, enim molestiae exercitationem fugiat
+        expedita deserunt provident eveniet, sequi amet quis libero optio quo?
+        Illum voluptas ipsa, nisi delectus at ratione sit voluptatum, saepe,
+        quidem quae earum cumque asperiores perspiciatis. Totam ullam minima
+        inventore vitae placeat. Nisi deserunt cum hic, porro pariatur rem unde,
+        saepe quod vel ex ad odio harum consectetur aperiam cupiditate quam
+        
+      </p>
+      <div class="container-table">
+        <table id="myTable">
+            <!-- empty -->
+        </table>
+      </div>
+    </div>
+
+    <div class="container-bottom">
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati
+        eaque reiciendis, corrupti dolorum, fugiat repudiandae odio ut
+        repellendus ipsam inventore iste itaque repellat non neque nobis magni.
+        Fuga, ad officia explicabo atque saepe natus dicta ipsa quam ipsam
+        voluptate repellendus asperiores suscipit nihil, incidunt laborum omnis
+        exercitationem! Expedita, reiciendis. Illo vitae recusandae optio
+        laborum molestiae fugiat ex error, asperiores aliquam provident amet
+        pariatur cum n 
+      </p>
+      <button id="generatePDFbutton">Generate Pdf and print</button>
+    </div>
+
+    <script src="app.js"></script>
+    <script type="text/javascript">
+      window.jsPDF = window.jspdf.jsPDF;
+      document
+        .getElementById("generatePDFbutton")
+        .addEventListener("click", generatePDF);
+
+      function generatePDF() {
+        console.log("clicked");
+        // Create a new jsPDF instance with landscape orientation and A4 size sheet
+        const doc = new jsPDF({
+          orientation: "landscape",
+          unit: "mm",
+          format: "a4",
+        });
+
+        // Get the HTML element you want to print
+        const elementToPrint = document.getElementsByTagName("body")[0];
+
+        // Convert the element to canvas
+        html2canvas(elementToPrint).then((canvas) => {
+          // Get the canvas data as an image
+          const imgData = canvas.toDataURL("image/png");
+
+          // Add the image to the PDF document
+          doc.addImage(imgData, "PNG", 0, 0, 297, 210);
+
+          // Save and print the PDF document
+          doc.save("file.pdf");
+          doc.autoPrint();
+        });
+      }
+    </script>
+  </body>
 </html>

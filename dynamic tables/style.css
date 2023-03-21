@@ -1,9 +1,30 @@
+*{
+    margin:0,
+    padding:0,
+    box-sizing:border-box;
+    text-align:center;
+    font-size:16px;
+  }
+
 body{
-    display:flex;
-    justify-content:space-evenly;
-    align-items:center;
+ min-height:100vh;
+ display:flex;
+ flex-direction:column;
+ justify-content:space-between;
+
+   
 }
-table,td,{
-border:1px solid black;
-padding: 2px 4px;
-}
+table, td, th {
+    border: 1px solid;
+    
+  }
+  
+  
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .container-table{
+ 
+  }
