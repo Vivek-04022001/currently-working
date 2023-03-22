@@ -181,6 +181,7 @@
           unit: "mm",
           format: "a4",
         });
+        // doc.setDPI(400);
 
         // Get the HTML element you want to print
         const elementToPrint1 = document.getElementById("first-page");
@@ -201,12 +202,12 @@
           const scaleFactor1 = pdfWidth / element1Width;
           const scaleFactor2 = pdfWidth / element2Width;
 
-          html2canvas(element1, { scaleFactor:2 }).then((canvas1) => {
+          html2canvas(element1, {dpi: 300, scale:3 }).then((canvas1) => {
             const imgData1 = canvas1.toDataURL("image/png");
 
             doc.addImage(imgData1, "PNG", 0, 0, pdfWidth, pdfHeight);
 
-            html2canvas(element2, { scaleFactor: 2 }).then((canvas2) => {
+            html2canvas(element2, {dpi: 300, scale:3 }).then((canvas2) => {
               const imgData2 = canvas2.toDataURL("image/png");
 
               doc.addPage();
