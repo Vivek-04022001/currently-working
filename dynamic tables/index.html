@@ -10,56 +10,90 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="container-top">
-      <h1>working with dynamic tables.</h1>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam maiores
-        modi quisquam! Tempora laudantium facilis consequuntur minus delectus
-        saepe quo maxime neque nostrum magni porro, nam earum distinctio
-        provident, perferendis veritatis quasi dolorem quos perspiciatis
-        consequatur rerum alias iure qui! Iusto quia qui laboriosam quis debitis
-        a, distinctio vel ratione sequi quas ea. Maxime tempore delectus
-        voluptatum quae. Tenetur, magni? Officia ab maiores ratione! Soluta ab
-        natus dolores, optio reprehenderit voluptates quo totam. Quo voluptatum
-        eos nam dolores odio ad praesentium dolorum dolorem esse eum, neque
-        error amet ratione voluptatem iste illum qui animi quidem. Assumenda
-        voluptatem omnis iusto reprehenderit dicta error tempore odio architecto
-        commodi incidunt. Possimus, voluptas. Inventore labore aspernatur
-        doloribus corporis laudantium laborum sit quae vel repudiandae, natus
-        iure itaque iste tenetur dolorum delectus. Fugiat ducimus esse
-        consectetur quaerat excepturi labore animi iste sapiente. Ipsum neque
-        impedit veritatis similique quod iure architecto eum repellendus natus
-        facere molestias accusamus atque, enim molestiae exercitationem fugiat
-        expedita deserunt provident eveniet, sequi amet quis libero optio quo?
-        Illum voluptas ipsa, nisi delectus at ratione sit voluptatum, saepe,
-        quidem quae earum cumque asperiores perspiciatis. Totam ullam minima
-        inventore vitae placeat. Nisi deserunt cum hic, porro pariatur rem unde,
-        saepe quod vel ex ad odio harum consectetur aperiam cupiditate quam
-        
-      </p>
-      <div class="container-table">
-        <table id="myTable">
+    <div id="first-page" class="page">
+      <div class="container-top">
+        <h2>GROUP LOAN APPLICATION FORM (Office Copy)</h2>
+        <div>
+          <h3>Loan Sanction Letter Cum Demand Promissaory Note</h3>
+          <p>
+            Center Meeting Day: <span>Thurs</span> Time <span>12:30 pm</span>
+          </p>
+        </div>
+        <div>
+          <p>Date of disbursement <span></span></p>
+          <p>Repayment Frequency: <span> 14</span> (in Days)</p>
+        </div>
+        <div>
+          <p>
+            I/We, the member of Center no. <span id="center"></span> Group
+            <span id="group"> A </span> at <span>123123123123</span> Branch
+            (branch name and code) of <span id="branch"> R26-AGRA</span> Region
+            apply to Satin Credit Care Network Ltd. for the loans and the
+            contents are filled at my/our instructions and are read over and
+            explained in the language to me/us group memebers by the Center
+            Leader/ Community Service Officer and made me/ us understand. I / We
+            authorized SCNL to amount in cash/ NEFT to me/ us /product vendor/
+            authorized dealer on my/our behalf. I/ We understand that I/We will
+            receive the remaining loan amount as showed in below table after
+            auto-deduction of Loan Processing Fee including applicable Credit
+            Shield Insurance Premium (CSIP). I/We hereby make this loadn
+            application with my/us free will and consent to the declaration
+            mentioned overleaf and make the following factual declarations which
+            are true and corrent . If I/ We cancel the loan, I/We undertake to
+            refund the transereed loan amount to Satin Creditcare Network Ltd.
+            along with applicable interest if any.
+          </p>
+        </div>
+        <label for="asset">
+          Is the asset classified as a qualifying asset?
+          <input type="checkbox" name="asset" id="asset-yes" value="yes" />
+          <span>Yes</span>
+          <input type="checkbox" name="asset" id="asset-no" value="no" />
+          <span>No</span>
+          <p>
+            I/We do not have a permanent Account Number(PAN) hence submitting
+            form 60 details as per second to rule 114B of Income Tax Rules, 1962
+          </p>
+        </label>
+
+        <div class="container-table">
+          <table id="myTable">
             <!-- empty -->
-        </table>
+          </table>
+        </div>
+      </div>
+
+      <div class="container-bottom">
+        <hr />
+        <h4>FOR OFFICIAL PURPOSE ONLY</h4>
+        <p>
+          As per request of your loan application . we Satin Creditcase network
+          Ltd. (SCNL), hereby approve above-mentioned loan amount. The final
+          agreement is subject to agreement of auto-debit of loan processing fee
+          (including Applicable Tax-Non-refundable) and applicable Premium for
+          credit shield insurance at the time of disbursement of the loan amount
+          for above -mentioned purpose. The loan amount is repayable in
+          <span> 5000</span> weekly /Bi-weekly/monthly installment along with an
+          effective rate of interest on diminishing balance method for Income
+          Generation Loans and the installment payable by you is stated in loan
+          card
+        </p>
+        <div>
+          <h5>application Form is an integral part of loan card</h5>
+          <h5>BM/AM Employee ID-</h5>
+          <h5>BM/ABM Signature -</h5>
+        </div>
+
+        <button id="generatePDFbutton">Generate Pdf and print</button>
       </div>
     </div>
 
-    <div class="container-bottom">
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati
-        eaque reiciendis, corrupti dolorum, fugiat repudiandae odio ut
-        repellendus ipsam inventore iste itaque repellat non neque nobis magni.
-        Fuga, ad officia explicabo atque saepe natus dicta ipsa quam ipsam
-        voluptate repellendus asperiores suscipit nihil, incidunt laborum omnis
-        exercitationem! Expedita, reiciendis. Illo vitae recusandae optio
-        laborum molestiae fugiat ex error, asperiores aliquam provident amet
-        pariatur cum n 
-      </p>
-      <button id="generatePDFbutton">Generate Pdf and print</button>
+    <div id="second-page" class="page">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos tempora, est rerum necessitatibus dolores itaque ea sapiente repellendus sequi perspiciatis vitae, officiis distinctio facilis modi saepe culpa labore ad voluptatibus expedita recusandae. Asperiores dignissimos, nostrum, nulla voluptatibus accusamus fugit neque omnis necessitatibus magni voluptate, cum expedita possimus laudantium quasi impedit amet quod alias nesciunt beatae. Vitae corrupti, odio adipisci esse quibusdam ullam suscipit minus magni nobis, sint voluptates laborum accusamus velit, eveniet nihil. Alias assumenda eligendi odio ea. Consequatur laudantium rem, enim optio tempora sapiente natus velit quidem cupiditate possimus tenetur, reprehenderit maiores amet veritatis nesciunt temporibus praesentium, magni accusamus. Molestiae ullam, fugit dolores unde tempora voluptatem aspernatur sapiente facere natus magni eveniet dolorem numquam quo cupiditate! Fugit ratione earum veritatis rerum molestias mollitia explicabo! Ut, provident repellendus! Maxime hic similique impedit, optio quis, ad libero sint quos, natus est nemo iste delectus cumque molestiae et reprehenderit expedita perferendis? Eius, tempora vel dolore itaque quaerat qui soluta odit aliquam expedita libero perspiciatis hic quibusdam eligendi commodi aperiam sed, deserunt error harum magni dolor sequi nam ea. Numquam, fuga doloremque, tenetur nihil totam culpa nam veniam repellat esse temporibus deserunt mollitia aliquam iste ipsam ad unde molestiae labore, praesentium corrupti. Vel maiores in facilis saepe atque consectetur earum perferendis. Reprehenderit quas nisi aut assumenda maxime beatae, architecto maiores perferendis facilis dignissimos cupiditate hic eligendi a corrupti at cumque? Magnam repudiandae sed a, culpa odio, optio odit eligendi eaque, enim necessitatibus ab! Provident, expedita sapiente! Obcaecati doloremque, officia laboriosam quas a dolorum est magnam animi porro similique molestiae quis ad eaque ea! Explicabo facilis nihil dignissimos repellat quaerat ea quisquam minus consequuntur cum sit, aliquid vitae quae rerum vel aspernatur tempora blanditiis at autem placeat tenetur provident! Natus nam voluptatum esse consectetur suscipit laudantium unde deleniti nemo fugit ex aliquam, est ducimus incidunt illo soluta explicabo ipsa minus quis quo deserunt. Odio aliquid voluptate, ullam repellat harum deserunt eius, reiciendis sapiente explicabo unde quaerat natus nisi perspiciatis a dolorem enim, veniam ex quo cupiditate. Molestiae id, voluptatibus aperiam pariatur temporibus aut quas voluptates, alias tempore fuga, enim deleniti nam ducimus tenetur autem laboriosam? Ducimus minima possimus excepturi quibusdam quisquam cupiditate culpa dicta tempora iste eius, repellendus placeat obcaecati recusandae ipsum asperiores ea quae nisi error id facilis modi. Nihil vitae consequatur maiores iusto fugiat delectus sunt assumenda suscipit deleniti. Ex, consequatur fugit eos corporis tenetur aut molestiae quis vel, nisi aliquam, itaque unde? Neque quis dolorum, doloremque consectetur voluptates debitis exercitationem cumque soluta ex illo molestias odio earum quibusdam blanditiis. Officia adipisci aliquam nostrum omnis atque facere magni molestias aut iure minima. Illum dolorem quia odio aut doloribus quidem, fugit in aliquam nisi qui, iusto minus eligendi et commodi, officia incidunt quos accusantium consequatur beatae corrupti nobis vitae! Quas dicta enim, beatae ea laborum quisquam quis temporibus officia reiciendis asperiores necessitatibus unde adipisci porro? Accusamus vel cumque neque aut soluta perspiciatis accusantium est eos minus autem obcaecati rerum, saepe error voluptates suscipit, debitis maxime nihil qui voluptate praesentium illo! Fugit, quasi dicta?
     </div>
 
     <script src="app.js"></script>
-    <script type="text/javascript">
+    <script>
       window.jsPDF = window.jspdf.jsPDF;
       document
         .getElementById("generatePDFbutton")
@@ -75,20 +109,30 @@
         });
 
         // Get the HTML element you want to print
-        const elementToPrint = document.getElementsByTagName("body")[0];
+        const elementToPrint1 = document.getElementById("first-page");
+        const elementToPrint2 = document.getElementById("second-page");
 
-        // Convert the element to canvas
-        html2canvas(elementToPrint).then((canvas) => {
-          // Get the canvas data as an image
-          const imgData = canvas.toDataURL("image/png");
+       
+        function printPDF(element1, element2) {
+          
+          html2canvas(element1).then((canvas1) => {
+            const imgData1 = canvas1.toDataURL("image/png");
 
-          // Add the image to the PDF document
-          doc.addImage(imgData, "PNG", 0, 0, 297, 210);
+            doc.addImage(imgData1, "PNG", 0, 0, 297, 210); 
 
-          // Save and print the PDF document
-          doc.save("file.pdf");
-          doc.autoPrint();
-        });
+            html2canvas(element2).then((canvas2) => {
+              const imgData2 = canvas2.toDataURL("image/png");
+
+              doc.addPage();
+              doc.addImage(imgData2, "PNG", 0, 0, 297, 210);
+
+              doc.save("file.pdf");
+              doc.autoPrint();
+            });
+          });
+        }
+
+        printPDF(elementToPrint1, elementToPrint2);
       }
     </script>
   </body>
