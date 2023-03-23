@@ -269,4 +269,9 @@ loanData2.forEach((loan, index) => {
 
 
 
+// print button
+const printBtn = document.getElementById('print-button');
 
+printBtn.addEventListener('click', () => {
+  window.print();
+});
