@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap');
 *{
   margin:0,
   padding:0,
@@ -7,42 +7,79 @@
 }
 
 body{
- 
- font-family: 'Roboto', sans-serif;
+ font-family: 'Oswald', sans-serif;
  font-size: 12px;
- line-height:11spx;
+ line-height:12px;
+ padding:10px;
+}
+@media print{
+  @page{
+    size:A4 landscape;
+    margin:-2.5em;
+    padding:-2.5em;
+  }
+
+  .page{
+    page-break-after:always;
+    
+  }
+ 
+  body{
+    transform: scale(0.9);
+    transform-origin:50% 50%;
+    margin:0;
+    padding:0;
+  }
+.second {
+  font-size:9px;
+  line-height:8px;
+ 
+}
+  .container-bottom{
+  padding-bottom:20px;
+ }
 }
 /* utlity styles */
 
 table, td, th {
 border: 1px solid;
-/* font-size:10px; */
 text-align:center;
 }
 
 table{ 
 width: 100%;
 border-collapse: collapse;
-font-size: 7px;
+font-size: 12px;
 
 }
 
 h2{
   text-align:center;
+  text-decoration:underline;
 }
+h3{
+  text-decoration:underline;
+}
+
 label {
   display: block;
   margin-bottom: 10px;
 }
 
+ol{
+ margin-left:-12px;
+}
 
 
 /* classess */
 .page{
  min-height:100vh;
+width:100vdw;
  display:flex;
  flex-direction:column;
  justify-content:space-between;
+ align-item:center;
+ flex-wrap:wrap;
 }
 
 .container-top,
@@ -55,7 +92,7 @@ label {
   display:flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0px 2px;
+  /* padding: 0px 2px; */
   
 }
 .container-top span,
@@ -68,3 +105,15 @@ label {
   font-weight:800;
 }
 
+.container-bottom .input-container{
+  display:flex;
+  align-items:center;
+  line-height:0;
+  width: 30%;
+}
+.input-container .text-space{
+  display:inline-block;
+}
+.input-container .input-space{
+  width:50%;
+}

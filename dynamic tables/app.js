@@ -1,6 +1,6 @@
 const loanData = [
   {
-    "Member photo": "https://via.placeholder.com/40",
+    "Member photo": "https://via.placeholder.com/60",
     "Member Id": "M001",
     "Loan Id": "L001",
     "Date of application": "2022-03-20",
@@ -21,7 +21,7 @@ const loanData = [
     "Revenue Stamp": 500,
   },
   {
-    "Member photo": "https://via.placeholder.com/40",
+    "Member photo": "https://via.placeholder.com/60",
     "Member Id": "M002",
     "Loan Id": "L002",
     "Date of application": "2022-03-15",
@@ -42,7 +42,7 @@ const loanData = [
     "Revenue Stamp": 2000,
   },
   {
-    "Member photo": "https://via.placeholder.com/40",
+    "Member photo": "https://via.placeholder.com/60",
     "Member Id": "M003",
     "Loan Id": "L003",
     "Date of application": "2022-03-10",
@@ -63,7 +63,7 @@ const loanData = [
     "Revenue Stamp": 1000,
   },
   {
-    "Member photo": "https://via.placeholder.com/40",
+    "Member photo": "https://via.placeholder.com/60",
     "Member Id": "M004",
     "Loan Id": "L004",
     "Date of application": "2022-03-05",
@@ -84,7 +84,7 @@ const loanData = [
     "Revenue Stamp": 1000,
   },
   {
-    "Member photo": "https://via.placeholder.com/40",
+    "Member photo": "https://via.placeholder.com/60",
     "Member Id": "M005",
     "Loan Id": "L005",
     "Date of application": "2022-03-05",
@@ -106,6 +106,7 @@ const loanData = [
   },
 ];
 
+// first table
 const table = document.getElementById("myTable");
 const thead = table.createTHead();
 const tbody = table.createTBody();
@@ -133,7 +134,6 @@ const headers = [
 ];
 
 // create table header
-
 const headerRow = thead.insertRow(0);
 for (let i = 0; i < headers.length; i++) {
   const header = document.createElement("th");
@@ -157,3 +157,116 @@ loanData.forEach((loan, index) => {
     }
   }
 });
+
+// create an array of 5 dummy objects with name as s.no , group code , loan id , member's name, co-insured name, nominee name, contact no. member's signature, co-insured sign
+
+// SECOND TABLE
+const loanData2 = [
+  {
+    "s.no": 1,
+    "group code": "ABC123",
+    "loan id": "L001",
+    "member's name": "John Smith",
+    "co-insured name": "Jane Doe",
+    "nominee name": "Sarah Johnson",
+    "relationship": "abc",
+    "contact no.": "555-1234",
+    "member's signature": "signature1",
+    "co-insured signature": "signature2",
+  },
+  {
+    "s.no": 2,
+    "group code": "DEF456",
+    "loan id": "L002",
+    "member's name": "Jane Doe",
+    "co-insured name": "John Smith",
+    "nominee name": "Mike Brown",
+    "relationship": "abc",
+    "contact no.": "555-5678",
+    "member's signature": "signature3",
+    "co-insured signature": "signature4",
+  },
+  {
+    "s.no": 3,
+    "group code": "GHI789",
+    "loan id": "L003",
+    "member's name": "Mike Brown",
+    "co-insured name": "Sarah Johnson",
+    "nominee name": "John Smith",
+    "relationship": "abc",
+
+    "contact no.": "555-9012",
+    "member's signature": "signature5",
+    "co-insured signature": "signature6",
+  },
+  {
+    "s.no": 4,
+    "group code": "JKL012",
+    "loan id": "L004",
+    "member's name": "Sarah Johnson",
+    "co-insured name": "Mike Brown",
+    "nominee name": "Jane Doe",
+    "relationship": "abc",
+
+    "contact no.": "555-3456",
+    "member's signature": "signature7",
+    "co-insured signature": "signature8",
+  },
+  {
+    "s.no": 5,
+    "group code": "MNO345",
+    "loan id": "L005",
+    "member's name": "John Smith",
+    "co-insured name": "Mike Brown",
+    "nominee name": "Jane Doe",
+    "relationship": "abc",
+
+    "contact no.": "555-3456",
+    "member's signature": "signature7",
+    "co-insured signature": "signature8",
+  },
+];
+const table2 = document.getElementById("myTable2");
+const headers2 = [
+  "S.No",
+  "GROUP CODE",
+  "LOAN ID",
+  "MEMBER'S NAME",
+  "CO-INSURED NAME",
+  "NOMINEE NAME",
+  "RELATIONSHIP",
+  "CONTACT NO.",
+  "MEMBER'S SIGNATURE",
+  "CO-INSURED SIGN",
+];
+
+const thead2 = table2.createTHead();
+const tbody2 = table2.createTBody();
+
+// create table 2 header
+const headerRow2 = thead2.insertRow(0);
+for (let i = 0; i < headers2.length; i++) {
+  const header2 = document.createElement("th");
+  header2.innerHTML = headers2[i];
+  headerRow2.appendChild(header2);
+}
+
+loanData2.forEach((loan, index) => {
+  const row = tbody2.insertRow(index);
+
+  for (const key in loan) {
+    const cell = row.insertCell();
+    const value = loan[key];
+    if (key === "Member photo") {
+      const image = document.createElement("img");
+      image.src = value;
+      cell.appendChild(image);
+    } else {
+      cell.textContent = value;
+    }
+  }
+});
+
+
+
+
