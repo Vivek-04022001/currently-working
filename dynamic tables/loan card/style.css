@@ -15,24 +15,26 @@ body {
   @page {
     size: A4 landscape;
     margin: -2.8em;
-    padding: -2.8em;
+    /* padding: -2.8em; */
   }
-
+  * {
+    /* outline: 1px solid red */
+  }
   .container {
-    transform: scale(0.95);
+    transform: scale(0.91);
     transform-origin: 50% 50%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-evenly;
+    align-items: center; */
   }
   table {
     font-size: 10px;
-    line-height: 9px;
+    line-height: 10px;
     padding: 0;
     width: 40%;
   }
 }
+
 table,
 td,
 th {
@@ -44,14 +46,11 @@ table {
   border-collapse: collapse;
 }
 .container {
-  width: 100vw;
+  min-width: 100vw;
   display: flex;
   justify-content: space-between;
 }
 .sides {
-  /* transform: scale(0.7); */
-  border: 1px dotted blue;
-  padding: 10px;
-  min-width: 50%;
-  margin-bottom: 20px;
+  padding: 20px;
+  /* margin-bottom: 20px; */
 }
