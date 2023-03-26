@@ -259,6 +259,7 @@ loanData2.forEach((loan, index) => {
     const value = loan[key];
     if (key === "Member photo") {
       const image = document.createElement("img");
+      
       image.src = value;
       cell.appendChild(image);
     } else {
@@ -275,3 +276,20 @@ const printBtn = document.getElementById('print-button');
 printBtn.addEventListener('click', () => {
   window.print();
 });
+
+// clone documents
+// const cloneBtn = document.getElementById('clone-button');
+// cloneBtn.addEventListener('click', cloneDocs);
+
+function cloneDocs(){
+
+  const originalDoc1 = document.getElementById('first-page')
+  const originalDoc2 = document.getElementById('second-page')
+  
+  const copyDoc1 = originalDoc1.cloneNode(true);
+  const copyDoc2 = originalDoc2.cloneNode(true);
+  originalDoc2.after(copyDoc1);
+  copyDoc1.after(copyDoc2);
+}
+
+cloneDocs();

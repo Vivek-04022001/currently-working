@@ -11,6 +11,7 @@
   </head>
   <body>
     <button style="float:right" id="print-button">Print</button>
+    <button style="float:right" id="clone-button">Create Clone</button>
     <div id="first-page" class="page first">
       <div class="container-top">
         <h2>GROUP LOAN APPLICATION FORM (Office Copy)</h2>
@@ -88,6 +89,7 @@
 
         <!-- <button id="generatePDFbutton">Generate Pdf and print</button> -->
       </div>
+    
     </div>
 
 
@@ -343,66 +345,13 @@
         </div>
       </div>
     </div>
+    
 </div>
 
 
     <script src="app.js"></script>
-    <!-- <script>
-      window.jsPDF = window.jspdf.jsPDF;
-      document
-        .getElementById("generatePDFbutton")
-        .addEventListener("click", generatePDF);
+   <script>
 
-      function generatePDF() {
-        console.log("clicked");
-        // Create a new jsPDF instance with landscape orientation and A4 size sheet
-        const doc = new jsPDF({
-          orientation: "landscape",
-          unit: "mm",
-          format: "A4",
-        });
-        // doc.setDPI(400);
-
-        // Get the HTML element you want to print
-        const elementToPrint1 = document.getElementById("first-page");
-        const elementToPrint2 = document.getElementById("second-page");
-
-        function printPDF(element1, element2) {
-          // Get the dimensions of the A4 page
-          const pdfWidth = doc.internal.pageSize.getWidth();
-          const pdfHeight = doc.internal.pageSize.getHeight();
-
-          // Get the dimensions of the elements
-          const element1Width = element1.offsetWidth;
-          const element1Height = element1.offsetHeight;
-          
-          const element2Width = element2.offsetWidth;
-          const element2Height = element2.offsetHeight;
-
-          // Calculate the scale factor needed to fit the elements within the A4 page
-          const scaleFactor1 = pdfWidth / element1Width;
-          const scaleFactor2 = pdfWidth / element2Width;
-
-          html2canvas(element1, {dpi: 300, scale:3 }).then((canvas1) => {
-            const imgData1 = canvas1.toDataURL("image/png");
-
-            doc.addImage(imgData1, "PNG", 0, 0, pdfWidth, pdfHeight);
-
-            html2canvas(element2, {dpi: 300, scale:3 }).then((canvas2) => {
-              const imgData2 = canvas2.toDataURL("image/png");
-              doc.addPage();
-
-              doc.addImage(imgData2, "PNG", 0, 0, pdfWidth, pdfHeight);
-
-
-              doc.save("file.pdf");
-              doc.autoPrint();
-            });
-          });
-        }
-
-        printPDF(elementToPrint1, elementToPrint2);
-      }
-    </script> -->
+   </script>
   </body>
 </html>
