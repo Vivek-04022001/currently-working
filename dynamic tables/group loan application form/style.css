@@ -26,7 +26,7 @@ font-family: 'Roboto', sans-serif;
   }
   
   body{
-    transform: scale(0.88);
+    transform: scale(0.9);
     transform-origin:50% 50%;
     margin:0;
     padding:0;
@@ -38,22 +38,43 @@ font-family: 'Roboto', sans-serif;
 
 .second {
   font-size:9px;
-  line-height:8px;
+  
+  line-height:12px; 
  
 }
   .container-bottom{
   padding-bottom:20px;
+  
  
  }
+ 
+ .container-bottom p{
+   font-size: 11px;
+   font-weight:900;
+  }
+  
+  .container-bottom h5{
+    font-size: 11px;
+    font-weight:900;
+  }
+  
+  #myTable2 td{
+  padding: 8px 4px;
+  } 
+
  #print-button{
   display:none;
  }
-}
+  /* code upated 7 june */
+  }
+
+
 /* utlity styles */
 
 table, td, th {
 border: 1px solid;
 text-align:center;
+
 }
 
 table{ 
