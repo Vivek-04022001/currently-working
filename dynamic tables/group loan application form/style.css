@@ -17,8 +17,10 @@ font-family: 'Roboto', sans-serif;
 @media print{
   @page{
     size:A4 landscape;
-    margin:-2.8em;
-    padding:-2.8em;
+    /* changes made on 8 june */
+
+    margin: -5em;
+    
   }
 
   .page{
@@ -26,10 +28,13 @@ font-family: 'Roboto', sans-serif;
   }
   
   body{
-    transform: scale(0.9);
+    /* changes made on 8 june */
+    transform: scale(0.84);
     transform-origin:50% 50%;
-    margin:0;
-    padding:0;
+
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
   }
 
   #second-page:last-child{
@@ -37,35 +42,36 @@ font-family: 'Roboto', sans-serif;
 }
 
 .second {
-  font-size:9px;
-  
-  line-height:12px; 
- 
+  /* changes made on 8 june */
+  font-size:8px;
+  line-height:10px; 
 }
-  .container-bottom{
+
+.container-bottom{
   padding-bottom:20px;
-  
- 
  }
  
  .container-bottom p{
-   font-size: 11px;
+   font-size: 10px;
    font-weight:900;
   }
   
   .container-bottom h5{
-    font-size: 11px;
+    font-size: 10px;
     font-weight:900;
   }
   
   #myTable2 td{
+  /* changes made on 8 june */
+
   padding: 8px 4px;
+  font-size: 12px;
   } 
 
  #print-button{
   display:none;
  }
-  /* code upated 7 june */
+  
   }
 
 
