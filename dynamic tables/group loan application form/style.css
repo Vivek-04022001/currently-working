@@ -139,21 +139,22 @@ width:100vdw;
   text-align:center;
   font-weight:800;
 }
+
 .container-bottom{
   /* border-bottom:1px solid black; */
 }
+
 .container-bottom .input-container{
   display:flex;
   align-items:center;
   line-height:0;
   width: 30%;
 }
+
 .input-container .text-space{
   display:inline-block;
 }
-.input-container .text-space p{
-  padding-bottom:10px;
-}
+
 .input-container .input-space{
   width:50%;
 }

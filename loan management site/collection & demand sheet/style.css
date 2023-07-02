@@ -10,16 +10,28 @@
   body {
     width: 297mm;
     height: 210mm;
+  
   }
 
-  .container-form {
-    page-break-after: always;
+  /* 2 July 2023 */
+  .page-break {
+    page-break-before: always;
+    
   }
+
+  #my-table td {
+    padding: 15px;
+  }
+  #my-table tr {
+    border: 1px solid black;
+  }
+ 
 }
 
 .container-form {
   width: auto;
   height: 100%;
+ 
   margin: 20px 10px;
   position: relative;
   padding: 5px;
@@ -42,7 +54,6 @@
 }
 
 .container-form table {
-  margin-top: 20px;
   width: 100%;
   border-collapse: collapse;
 }

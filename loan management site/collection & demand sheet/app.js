@@ -184,11 +184,15 @@ for(let i=0;i<headers.length;i++){
     const header = document.createElement('th');
     header.innerHTML = headers[i];
     headerRow.appendChild(header);
+  
 }
 
 // create table body
 data.forEach((loan, index)=>{
     const row = tbody.insertRow(index);
+    // 2July 2023
+    row.classList.add('page-break');
+    row.classList.add('singleton-row');
 
     for(const key in loan){
         const cell = row.insertCell();
@@ -196,3 +200,4 @@ data.forEach((loan, index)=>{
         cell.textContent = value;
     }
 })
+
