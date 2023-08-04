@@ -14,17 +14,15 @@
   }
 
   /* 2 July 2023 */
-  .page-break {
+  #my-table tr{
     page-break-before: always;
-    
+    border: 1px solid black;
   }
 
   #my-table td {
     padding: 15px;
   }
-  #my-table tr {
-    border: 1px solid black;
-  }
+  
  
 }
 

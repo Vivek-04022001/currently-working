@@ -1,0 +1,106 @@
+/* font-file */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+/* global css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+    font-size:14px;
+}
+
+/* print pdf */
+@media print {
+  @page {
+    size: A4 landscape;
+    margin-block: -1cm;
+    margin-inline: 0;
+  }
+
+  body {
+    border: 1px solid green;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+.account-statement-container {
+  padding: 2rem;
+}
+
+.company-info {
+  text-align: left;
+  font-size: 0.7rem;
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+}
+.company-info span {
+  display: block;
+  text-align: right;
+  font-weight: 900;
+  font-size: 1rem;
+}
+.column-header {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 0.5rem;
+  font-weight: 900;
+  margin-top:0.5em;
+}
+.column-header div {
+  width: 33%;
+}
+.column-header.first {
+  text-align: center;
+}
+.column-header.second {
+  text-align: left;
+}
+/* upper-section */
+.section-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.section-container .column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  border-top: 1px solid black;
+  padding-right: 2em;
+}
+.section-container .column .table-row {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-bottom:0.4em;
+}
+
+.section-container .table-header {
+  min-width: 200px;
+}
+.upper-section .table-header {
+  font-weight: 900;
+}
+.table-header p {
+  display: flex;
+  padding-inline: 0.1em;
+}
+
+.section-container .table-header span {
+  margin-left: auto;
+}
+.section-container .table-data {
+  flex: 1;
+  text-align: right;
+}
+
+/* lower section */

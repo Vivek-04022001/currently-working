@@ -190,8 +190,8 @@ for(let i=0;i<headers.length;i++){
 // create table body
 data.forEach((loan, index)=>{
     const row = tbody.insertRow(index);
-    // 2July 2023
-    row.classList.add('page-break');
+    // // 2July 2023
+    // row.classList.add('page-break');
     row.classList.add('singleton-row');
 
     for(const key in loan){
