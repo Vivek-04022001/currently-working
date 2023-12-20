@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* bowby one font */
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&family=Playfair+Display&display=swap');
+
+/* manrope */
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Playfair+Display&display=swap');
