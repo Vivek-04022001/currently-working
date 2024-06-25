@@ -8,8 +8,7 @@ export default {
     extend: {
       fontFamily: {
         bowby: ['Bowlby One', 'sans-serif'],
-        manrope:['Manrope', 'sans-serif'],
-        hindi: ['Tiro Devanagari Hindi', 'serif']
+        manrope:['Manrope', 'sans-serif']
       },
       colors:{
         primary: '#840032',

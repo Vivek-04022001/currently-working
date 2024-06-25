@@ -45,7 +45,7 @@ const Create = ({ editTask }) => {
   };
 
   return (
-    <div className="create_form">
+    <div className="bg-primary h-20 rounded-full  overflow-hidden flex items-center text-xl">
       <input
         type="text"
         placeholder="Enter Task..."
@@ -53,12 +53,14 @@ const Create = ({ editTask }) => {
           setTask(e.target.value);
         }}
         value={task}
+        className="border-none bg-primary text-white outline-none flex-1 h-full  px-10 placeholder:text-white "
       />
       <button
         type="button"
         onClick={(e) => {
           handleButton(e);
         }}
+        className=" px-6 rounded-tr-full rounded-br-full h-full bg-black text-white  font-bold"
       >
         {buttonText}
       </button>

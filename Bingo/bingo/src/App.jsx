@@ -1,32 +1,19 @@
-import { BrowserRouter as Router, Route, Link } from "react-dom";
+import { Routes, Route, Link } from "react-router-dom";
+
+import Game from "./pages/Game";
+import Home from "./pages/Home";
+import Rules from "./pages/Rules";
+import Questions from "./pages/Questions";
+
 function App() {
   return (
-    <>
-      <section>
-        {/* upper section */}
-        <header>
-          <nav>
-            <ul>
-              <li>Rules</li>
-              <li>Random</li>
-              <li>Questions</li>
-            </ul>
-            <h1>Bible Quest Bingo Challenge</h1>
-          </nav>
-        </header>
-
-        {/* lower section */}
-        <section>
-          <main>
-            <Router>
-              <Route path="/" exact component={Home} />
-              <Route path="/about" component={About} />
-              <Route path="/contact" component={Contact} />
-            </Router>
-          </main>
-        </section>
-      </section>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />}>
+        <Route path="/game" element={<Game />} />
+        <Route path="/rules" element={<Rules />} />
+        <Route path="/questions" element={<Questions />} />
+      </Route>
+    </Routes>
   );
 }
 

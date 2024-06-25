@@ -1,32 +1,77 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* bowby one font */
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&family=Playfair+Display&display=swap');
+
+/* manrope */
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Playfair+Display&display=swap');
+/* 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  
+  background: #151e3d;
+  color: white;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  padding-block: 30px;
+}
+
 .home {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 120px;
+  margin-top: 40px;
+  border:1px solid white;
+  padding:20px 25px;
+  min-height: 70dvh;
+  border-radius: 1.2rem;
 }
-.home h2{
-    font-size:3rem;
-    margin-block:0.3em;
+.home h2 {
+  font-size: 3rem;
+  margin-block: 0.3em;
 }
 
+.home h3 {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.create-form{
+  width:100%;
+}
 .create_form input {
   width: 300px;
-  padding: 10px;
-  border-bottom: 2px solid;
+  padding: 10px 20px;
+  margin-right:10px;
+  border: none;
   outline: none;
+  
 }
 
 .create_form button {
   padding: 10px;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
+  padding: 10px 25px;
+  font-weight: 600;
   cursor: pointer;
+  border:1px solid white;
+  
+}
+.create_form button:hover{
+  background:black;
+  color:white;
+  
 }
 
 .task {
@@ -34,30 +79,31 @@
   align-items: center;
   width: 360px;
   justify-content: space-between;
-  background-color: black;
-  color: white;
+  background-color: white;
+  width:100%;
+  color: black;
   padding: 8px 18px;
   margin-top: 12px;
   font-size: 20px;
 }
 
-.checkbox{
-    display:flex;
-    align-items:center
+.checkbox {
+  display: flex;
+  align-items: center;
 }
 
-.checkbox .icon{
-    margin-right: 5px;
-    font-size: 15px;
+.checkbox .icon {
+  margin-right: 5px;
+  font-size: 15px;
 }
-.task div span{
-    margin: 0px 5px 0px 4px;
-}
-
-.task div .icon{
-    cursor:pointer;
+.task div span {
+  margin: 0px 5px 0px 4px;
 }
 
-.line_through{
+.task div .icon {
+  cursor: pointer;
+}
+
+.line_through {
   text-decoration: line-through;
-}
+} */
